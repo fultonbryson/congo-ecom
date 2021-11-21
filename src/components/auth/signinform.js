@@ -32,7 +32,7 @@ class SignInForm extends Component {
         <Field
           className='sign-in-form__email'
           type='email'
-          title='sEmail'
+          title='Email'
           placeholder='Email'
           name='email'
           component={FormInput}
@@ -50,7 +50,7 @@ class SignInForm extends Component {
 
         <Field
           className='sign-in-form__login'
-          onClick={() => console.log("Whaddup my g")}
+          onClick={() => history.push("/account")}
           type='submit'
           title='login'
           name='login'
