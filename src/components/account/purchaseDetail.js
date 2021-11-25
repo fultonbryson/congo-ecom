@@ -38,7 +38,7 @@ class PurchaseDetail extends Component {
         />
 
         <PurchaseDetailLabel
-          className='purchase-detail__shipping'
+          className='purchase-detail__shipping-address'
           title='Shipping Address'
           value={`${name}\n${shippingAddress}`}
         />
@@ -48,6 +48,8 @@ class PurchaseDetail extends Component {
           title='Credit Card'
           value={`${creditCard}`}
         />
+        <a className='purchase-detail__track-shipment'>Track Shipment</a>
+        <a className='purchase-detail__print-receipt'>Print Receipt</a>
       </div>
     );
   }
