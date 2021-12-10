@@ -7,7 +7,7 @@
 
   &__form {
     display: grid;
-    grid-template-rows: [name-s street-address-s] 64px [name-e street-address-e email-s city-s] 64px [email-e city-e state-s zipcode-s] 64px [state-e zicode-e];
+    grid-template-rows: [name-s street-address-s] 64px [name-e street-address-e email-s city-s] 64px [email-e city-e state-s zipcode-s] 64px [state-e zipcode-e];
     grid-template-columns: [s] 1fr [m] 1fr [e];
     grid-row-gap: 15px;
   }
@@ -43,5 +43,9 @@
     input {
       width: 200px;
     }
+  }
+
+  &__change-password {
+    transform: translateY(38px);
   }
 }
