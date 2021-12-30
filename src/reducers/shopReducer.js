@@ -1,18 +1,19 @@
-import {} from "../actions/types";
+import { SET_SHOP_PRODUCTS } from "../actions/types";
 
 const INITIAL_STATE = {
   categories: [],
   selectedCategoryId: 0,
   selectedProducts: [],
+  products: [],
 };
 
 export default function (state = INITIAL_STATE, action) {
   switch (action.type) {
-    // case SET_SHOP_CATEGORIES:
-    //   return {
-    //     ...state,
-    //     categories: action.payload,
-    //   };
+    case SET_SHOP_PRODUCTS:
+      return {
+        ...state,
+        products: action.payload,
+      };
 
     default:
       return state;
