@@ -4,8 +4,7 @@
   grid-template-columns: 1/-1;
   grid-template-rows: 1/-1;
 
-  &__front,
-  &__back {
+  & > * {
     grid-column: 1/-1;
     grid-row: 1/-1;
   }
