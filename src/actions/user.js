@@ -22,34 +22,7 @@ export function addCartProduct(product) {
 export function fetchCartProducts() {
   return {
     type: SET_CART_PRODUCTS,
-    payload: [
-      {
-        _id: 0,
-        product: {
-          _id: 0,
-          title: "JavaScript in the Browser",
-          description:
-            "The FitnessGram™ Pacer Test is a multistage aerobic capacity test that progressively gets more difficult as it continues.",
-          price: "1.99",
-          belongsTo: [0, 1],
-          imageUrl: "http://via.placeholder.com/80x80",
-        },
-        quantity: 2,
-      },
-      {
-        _id: 1,
-        product: {
-          _id: 1,
-          title: "Graph Database",
-          description:
-            "The FitnessGram™ Pacer Test is a multistage aerobic capacity test that progressively gets more difficult as it continues.",
-          price: "1.99",
-          belongsTo: [0, 6],
-          imageUrl: "http://via.placeholder.com/80x80",
-        },
-        quantity: 1,
-      },
-    ],
+    payload: [],
   };
 }
 
