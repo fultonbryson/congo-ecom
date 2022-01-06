@@ -56,7 +56,7 @@ class PaymentForm extends Component {
         />
         <Field
           className='sign-up-form__back'
-          onClick={() => history.push("/signin")}
+          onClick={() => history.push("/information/shipping")}
           type='button'
           title='Back'
           name='back'
