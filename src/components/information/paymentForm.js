@@ -6,56 +6,59 @@ import { FormInput, FormButton } from "../formFields";
 
 import history from "../../history";
 
+import OrderSummary from "./orderSummary";
+
 class PaymentForm extends Component {
   render() {
     const { className, handleSubmit } = this.props;
     return (
-      <form onSubmit={handleSubmit} className={`${className} sign-in-form`}>
+      <form onSubmit={handleSubmit} className={`${className} payment-form`}>
         <Field
-          className='sign-up-form__name'
+          className='payment-form__name'
           type='name'
           title='Name'
-          placeholder='Name'
+          placeholder='Name on Credit Card'
           name='name'
           component={FormInput}
         />
         <Field
-          className='sign-up-form__email'
-          type='email'
-          title='Email'
-          placeholder='Email'
-          name='email'
-          component={FormInput}
-        />
-        <Field
-          className='sign-up-form__password'
-          type='password'
-          title='Password'
-          placeholder='Password'
-          name='password'
-          component={FormInput}
-        />
-        <Field
-          className='sign-up-form__confirm'
-          type='password'
-          title='Confirm Password'
-          placeholder='Confirm Password'
-          name='confirm'
+          className='payment-form__card'
+          type='card'
+          title='Credit Card Number'
+          placeholder='____-____-____-____'
+          name='card'
           component={FormInput}
         />
 
-        <div className='sign-up-form__line'></div>
+        <Field
+          className='payment-form__expiration'
+          type='expiration'
+          title='Expiration Date'
+          placeholder='MM/YY'
+          name='expiration'
+          component={FormInput}
+        />
+        <Field
+          className='payment-form__cvv'
+          type='cvv'
+          title='cvv'
+          placeholder='eg: 999'
+          name='cvv'
+          component={FormInput}
+        />
+
+        <div className='payment-form__line'></div>
 
         <Field
-          className='sign-up-form__login'
+          className='payment-form__place-order'
           onClick={() => history.push("/account")}
           type='submit'
-          title='Create Account'
-          name='login'
+          title='Place Order'
+          name='place-order'
           component={FormButton}
         />
         <Field
-          className='sign-up-form__back'
+          className='payment-form__back'
           onClick={() => history.push("/information/shipping")}
           type='button'
           title='Back'
@@ -63,6 +66,7 @@ class PaymentForm extends Component {
           short={true}
           component={FormButton}
         />
+        <OrderSummary className='payment-form__order-summary' />
       </form>
     );
   }
